@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database
--- Tempo de geração: 25-Fev-2026 às 11:13
+-- Tempo de geração: 25-Fev-2026 às 13:01
 -- Versão do servidor: 12.2.2-MariaDB-ubu2404
 -- versão do PHP: 8.3.30
 
@@ -37,26 +37,26 @@ CREATE TABLE `ingrediente` (
 --
 
 INSERT INTO `ingrediente` (`id_ingrediente`, `nome`) VALUES
+(13, 'Alho Francês'),
+(10, 'Arroz'),
 (1, 'Bacalhau'),
 (2, 'Batata'),
 (3, 'Batata Doce'),
-(4, 'Frango (Peito/Pernas)'),
-(5, 'Cenoura'),
-(6, 'Esparguete'),
-(7, 'Grão de Bico'),
-(8, 'Natas'),
 (9, 'Batata Palha'),
-(10, 'Arroz'),
-(11, 'Ervilhas'),
-(12, 'Ovos'),
-(13, 'Alho Francês'),
-(14, 'Moelas'),
-(15, 'Tomate'),
-(16, 'Espinafres'),
-(17, 'Massa'),
+(5, 'Cenoura'),
+(20, 'Chouriço Vegetariano'),
 (18, 'Douradinhos'),
+(11, 'Ervilhas'),
+(6, 'Esparguete'),
+(16, 'Espinafres'),
+(4, 'Frango (Peito/Pernas)'),
+(7, 'Grão de Bico'),
 (19, 'Leite de coco'),
-(20, 'Chouriço Vegetariano');
+(17, 'Massa'),
+(14, 'Moelas'),
+(8, 'Natas'),
+(12, 'Ovos'),
+(15, 'Tomate');
 
 -- --------------------------------------------------------
 
@@ -161,7 +161,25 @@ INSERT INTO `receita` (`id_receita`, `nome`, `categoria`) VALUES
 (9, 'Alho francês à brás', 'Vegetariano'),
 (10, 'Moelas com batata frita', 'Carne'),
 (11, 'Panados de frango com arroz de ervilhas', 'Carne'),
-(12, 'Ervilhas com ovos escalfados', 'Vegetariano');
+(12, 'Ervilhas com ovos escalfados', 'Vegetariano'),
+(13, 'Lasanha de tacho', 'Carne'),
+(14, 'Espetadas de tortilha com carne picada, pimento e queijo', 'Carne'),
+(15, 'Peitos de peru c/ maçã na airfryer com arroz', 'Carne'),
+(16, 'Asinhas de frango tipo kfc com arroz de cenoura', 'Carne'),
+(17, 'Massa com atum e tomate seco', 'Peixe'),
+(18, 'Legumes assados com ovos abertos', 'Vegetariano'),
+(19, 'Caril de lentilhas e couve flor com arroz branco', 'Vegetariano'),
+(20, 'Massada de peixe', 'Peixe'),
+(21, 'Salmão de frigideira com arroz', 'Peixe'),
+(22, 'Quiche de brócolos e nozes', 'Vegetariano'),
+(23, 'Feijão branco com atum e camarões', 'Peixe'),
+(24, 'Arroz de pato', 'Carne'),
+(25, 'Perna de Peru assada com puré de batata', 'Carne'),
+(26, 'Sopa de feijão branco e hortelã com croquetes de vegetais', 'Vegetariano'),
+(27, 'Risoto de espargos, tomate seco e manjericão', 'Vegetariano'),
+(28, 'Filetes de pescada no forno com batatas e brócolos', 'Peixe'),
+(29, 'Hamburguer de peru no pão com guacamole', 'Carne'),
+(30, 'Feijão encarnado com chouriço vegetariano e ovos abertos', 'Vegetariano');
 
 --
 -- Índices para tabelas despejadas
@@ -171,7 +189,8 @@ INSERT INTO `receita` (`id_receita`, `nome`, `categoria`) VALUES
 -- Índices para tabela `ingrediente`
 --
 ALTER TABLE `ingrediente`
-  ADD PRIMARY KEY (`id_ingrediente`);
+  ADD PRIMARY KEY (`id_ingrediente`),
+  ADD UNIQUE KEY `nome` (`nome`);
 
 --
 -- Índices para tabela `item_receita`
@@ -213,7 +232,7 @@ ALTER TABLE `planeamento`
 -- AUTO_INCREMENT de tabela `receita`
 --
 ALTER TABLE `receita`
-  MODIFY `id_receita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_receita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Restrições para despejos de tabelas
