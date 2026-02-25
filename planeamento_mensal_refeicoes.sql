@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database
--- Tempo de geração: 25-Fev-2026 às 10:25
+-- Tempo de geração: 25-Fev-2026 às 11:13
 -- Versão do servidor: 12.2.2-MariaDB-ubu2404
 -- versão do PHP: 8.3.30
 
@@ -71,6 +71,45 @@ CREATE TABLE `item_receita` (
   `unidade` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Extraindo dados da tabela `item_receita`
+--
+
+INSERT INTO `item_receita` (`id_receita`, `id_ingrediente`, `quantidade`, `unidade`) VALUES
+(1, 1, 400.00, 'g'),
+(1, 2, 500.00, 'g'),
+(2, 4, 500.00, 'g'),
+(2, 5, 2.00, 'un'),
+(2, 6, 250.00, 'g'),
+(3, 4, 300.00, 'g'),
+(3, 16, 100.00, 'g'),
+(3, 17, 300.00, 'g'),
+(4, 3, 300.00, 'g'),
+(4, 7, 400.00, 'g'),
+(4, 19, 200.00, 'ml'),
+(5, 3, 400.00, 'g'),
+(5, 12, 4.00, 'un'),
+(6, 4, 500.00, 'g'),
+(6, 8, 200.00, 'ml'),
+(6, 17, 250.00, 'g'),
+(7, 1, 400.00, 'g'),
+(7, 8, 200.00, 'ml'),
+(7, 9, 200.00, 'g'),
+(8, 5, 1.00, 'un'),
+(8, 10, 200.00, 'g'),
+(8, 18, 10.00, 'un'),
+(9, 9, 200.00, 'g'),
+(9, 12, 3.00, 'un'),
+(9, 13, 2.00, 'un'),
+(10, 2, 400.00, 'g'),
+(10, 14, 500.00, 'g'),
+(10, 15, 2.00, 'un'),
+(11, 4, 400.00, 'g'),
+(11, 10, 200.00, 'g'),
+(11, 11, 100.00, 'g'),
+(12, 11, 400.00, 'g'),
+(12, 12, 4.00, 'un');
+
 -- --------------------------------------------------------
 
 --
@@ -83,6 +122,16 @@ CREATE TABLE `planeamento` (
   `refeicao` varchar(50) DEFAULT NULL,
   `id_receita` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `planeamento`
+--
+
+INSERT INTO `planeamento` (`id_planeamento`, `data`, `refeicao`, `id_receita`) VALUES
+(1, '2026-02-26', NULL, 2),
+(2, '2026-02-27', NULL, 7),
+(3, '2026-02-28', NULL, 4),
+(4, '2026-03-01', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -158,7 +207,7 @@ ALTER TABLE `ingrediente`
 -- AUTO_INCREMENT de tabela `planeamento`
 --
 ALTER TABLE `planeamento`
-  MODIFY `id_planeamento` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_planeamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `receita`
