@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database
--- Tempo de geração: 24-Fev-2026 às 16:34
+-- Tempo de geração: 25-Fev-2026 às 10:25
 -- Versão do servidor: 12.2.2-MariaDB-ubu2404
 -- versão do PHP: 8.3.30
 
@@ -31,6 +31,32 @@ CREATE TABLE `ingrediente` (
   `id_ingrediente` int(11) NOT NULL,
   `nome` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `ingrediente`
+--
+
+INSERT INTO `ingrediente` (`id_ingrediente`, `nome`) VALUES
+(1, 'Bacalhau'),
+(2, 'Batata'),
+(3, 'Batata Doce'),
+(4, 'Frango (Peito/Pernas)'),
+(5, 'Cenoura'),
+(6, 'Esparguete'),
+(7, 'Grão de Bico'),
+(8, 'Natas'),
+(9, 'Batata Palha'),
+(10, 'Arroz'),
+(11, 'Ervilhas'),
+(12, 'Ovos'),
+(13, 'Alho Francês'),
+(14, 'Moelas'),
+(15, 'Tomate'),
+(16, 'Espinafres'),
+(17, 'Massa'),
+(18, 'Douradinhos'),
+(19, 'Leite de coco'),
+(20, 'Chouriço Vegetariano');
 
 -- --------------------------------------------------------
 
@@ -66,8 +92,27 @@ CREATE TABLE `planeamento` (
 
 CREATE TABLE `receita` (
   `id_receita` int(11) NOT NULL,
-  `nome` varchar(100) NOT NULL
+  `nome` varchar(100) NOT NULL,
+  `categoria` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Extraindo dados da tabela `receita`
+--
+
+INSERT INTO `receita` (`id_receita`, `nome`, `categoria`) VALUES
+(1, 'Bacalhau assado com batatas', 'Peixe'),
+(2, 'Frango estufado com cenoura e esparguete', 'Carne'),
+(3, 'Massa gratinada com espinafres e frango', 'Carne'),
+(4, 'Curry de grão com batata doce', 'Vegetariano'),
+(5, 'Fritada de batata doce', 'Vegetariano'),
+(6, 'Strogonoff de frango com massa', 'Carne'),
+(7, 'Bacalhau com natas e batata palha', 'Peixe'),
+(8, 'Douradinhos com arroz de cenoura', 'Peixe'),
+(9, 'Alho francês à brás', 'Vegetariano'),
+(10, 'Moelas com batata frita', 'Carne'),
+(11, 'Panados de frango com arroz de ervilhas', 'Carne'),
+(12, 'Ervilhas com ovos escalfados', 'Vegetariano');
 
 --
 -- Índices para tabelas despejadas
@@ -107,7 +152,7 @@ ALTER TABLE `receita`
 -- AUTO_INCREMENT de tabela `ingrediente`
 --
 ALTER TABLE `ingrediente`
-  MODIFY `id_ingrediente` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ingrediente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de tabela `planeamento`
@@ -119,7 +164,7 @@ ALTER TABLE `planeamento`
 -- AUTO_INCREMENT de tabela `receita`
 --
 ALTER TABLE `receita`
-  MODIFY `id_receita` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_receita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Restrições para despejos de tabelas
