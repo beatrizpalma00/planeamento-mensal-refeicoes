@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database
--- Tempo de geração: 25-Fev-2026 às 13:01
+-- Tempo de geração: 02-Mar-2026 às 20:12
 -- Versão do servidor: 12.2.2-MariaDB-ubu2404
 -- versão do PHP: 8.3.30
 
@@ -37,26 +37,51 @@ CREATE TABLE `ingrediente` (
 --
 
 INSERT INTO `ingrediente` (`id_ingrediente`, `nome`) VALUES
+(43, 'Abacate'),
 (13, 'Alho Francês'),
 (10, 'Arroz'),
+(26, 'Asinhas de frango'),
+(46, 'Atum'),
 (1, 'Bacalhau'),
 (2, 'Batata'),
 (3, 'Batata Doce'),
 (9, 'Batata Palha'),
+(31, 'Brócolos'),
+(33, 'Camarões'),
+(21, 'Carne picada'),
 (5, 'Cenoura'),
 (20, 'Chouriço Vegetariano'),
+(29, 'Couve-flor'),
+(41, 'Croquetes vegetais'),
 (18, 'Douradinhos'),
 (11, 'Ervilhas'),
+(37, 'Espargos'),
 (6, 'Esparguete'),
 (16, 'Espinafres'),
+(34, 'Feijão branco'),
+(44, 'Feijão encarnado'),
 (4, 'Frango (Peito/Pernas)'),
 (7, 'Grão de Bico'),
+(40, 'Hortelã'),
 (19, 'Leite de coco'),
+(28, 'Lentilhas'),
+(30, 'Lombo de Salmão'),
+(25, 'Maçã'),
+(38, 'Manjericão'),
 (17, 'Massa'),
 (14, 'Moelas'),
 (8, 'Natas'),
+(32, 'Nozes'),
 (12, 'Ovos'),
-(15, 'Tomate');
+(42, 'Pão de hambúrguer'),
+(35, 'Pato'),
+(36, 'Perna de Peru'),
+(39, 'Pescada'),
+(23, 'Pimento'),
+(24, 'Queijo'),
+(15, 'Tomate'),
+(27, 'Tomate seco'),
+(22, 'Tortilhas');
 
 -- --------------------------------------------------------
 
@@ -108,7 +133,43 @@ INSERT INTO `item_receita` (`id_receita`, `id_ingrediente`, `quantidade`, `unida
 (11, 10, 200.00, 'g'),
 (11, 11, 100.00, 'g'),
 (12, 11, 400.00, 'g'),
-(12, 12, 4.00, 'un');
+(12, 12, 4.00, 'un'),
+(13, 17, 250.00, 'g'),
+(13, 21, 500.00, 'g'),
+(13, 24, 200.00, 'g'),
+(14, 21, 300.00, 'g'),
+(14, 22, 4.00, 'un'),
+(14, 23, 1.00, 'un'),
+(15, 10, 150.00, 'g'),
+(15, 25, 2.00, 'un'),
+(15, 36, 400.00, 'g'),
+(16, 10, 150.00, 'g'),
+(16, 26, 500.00, 'g'),
+(17, 17, 250.00, 'g'),
+(17, 27, 50.00, 'g'),
+(17, 46, 2.00, 'latas'),
+(18, 12, 4.00, 'un'),
+(19, 10, 150.00, 'g'),
+(19, 28, 200.00, 'g'),
+(19, 29, 1.00, 'un'),
+(20, 33, 100.00, 'g'),
+(20, 39, 300.00, 'g'),
+(21, 10, 150.00, 'g'),
+(21, 30, 2.00, 'un'),
+(22, 31, 300.00, 'g'),
+(22, 32, 50.00, 'g'),
+(23, 34, 400.00, 'g'),
+(23, 46, 2.00, 'latas'),
+(24, 35, 500.00, 'g'),
+(25, 36, 800.00, 'g'),
+(26, 34, 400.00, 'g'),
+(27, 10, 200.00, 'g'),
+(27, 37, 1.00, 'molho'),
+(28, 39, 4.00, 'un'),
+(29, 42, 2.00, 'un'),
+(29, 43, 1.00, 'un'),
+(30, 20, 1.00, 'un'),
+(30, 44, 400.00, 'g');
 
 -- --------------------------------------------------------
 
@@ -220,7 +281,7 @@ ALTER TABLE `receita`
 -- AUTO_INCREMENT de tabela `ingrediente`
 --
 ALTER TABLE `ingrediente`
-  MODIFY `id_ingrediente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_ingrediente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT de tabela `planeamento`
