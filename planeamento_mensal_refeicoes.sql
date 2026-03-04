@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: database
--- Tempo de geração: 02-Mar-2026 às 20:12
+-- Tempo de geração: 04-Mar-2026 às 12:13
 -- Versão do servidor: 12.2.2-MariaDB-ubu2404
 -- versão do PHP: 8.3.30
 
@@ -169,7 +169,9 @@ INSERT INTO `item_receita` (`id_receita`, `id_ingrediente`, `quantidade`, `unida
 (29, 42, 2.00, 'un'),
 (29, 43, 1.00, 'un'),
 (30, 20, 1.00, 'un'),
-(30, 44, 400.00, 'g');
+(30, 44, 400.00, 'g'),
+(32, 17, 250.00, 'g'),
+(32, 46, 1.00, 'latas');
 
 -- --------------------------------------------------------
 
@@ -192,7 +194,8 @@ INSERT INTO `planeamento` (`id_planeamento`, `data`, `refeicao`, `id_receita`) V
 (1, '2026-02-26', NULL, 2),
 (2, '2026-02-27', NULL, 7),
 (3, '2026-02-28', NULL, 4),
-(4, '2026-03-01', NULL, 1);
+(4, '2026-03-01', NULL, 1),
+(6, '2026-03-04', NULL, 32);
 
 -- --------------------------------------------------------
 
@@ -240,7 +243,8 @@ INSERT INTO `receita` (`id_receita`, `nome`, `categoria`) VALUES
 (27, 'Risoto de espargos, tomate seco e manjericão', 'Vegetariano'),
 (28, 'Filetes de pescada no forno com batatas e brócolos', 'Peixe'),
 (29, 'Hamburguer de peru no pão com guacamole', 'Carne'),
-(30, 'Feijão encarnado com chouriço vegetariano e ovos abertos', 'Vegetariano');
+(30, 'Feijão encarnado com chouriço vegetariano e ovos abertos', 'Vegetariano'),
+(32, 'Teste de Massa', 'Peixe');
 
 --
 -- Índices para tabelas despejadas
@@ -287,13 +291,13 @@ ALTER TABLE `ingrediente`
 -- AUTO_INCREMENT de tabela `planeamento`
 --
 ALTER TABLE `planeamento`
-  MODIFY `id_planeamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_planeamento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `receita`
 --
 ALTER TABLE `receita`
-  MODIFY `id_receita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_receita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- Restrições para despejos de tabelas
